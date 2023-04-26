@@ -12,7 +12,7 @@ export default function AppContent() {
   return (
     <Content
       className="site-layout"
-      style={{ padding: "0 50px", maxWidth: "1980px", margin: "auto" }}
+      style={{ padding: "0 50px", maxWidth: "1920px", margin: "auto" }}
     >
       <Breadcrumb style={{ margin: "16px 0" }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
