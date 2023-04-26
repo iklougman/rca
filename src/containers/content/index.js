@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumb, Card, Col, Layout, Row, theme } from "antd";
 import CardItem from "../../components/card";
+import FilterTabPane from "../../components/filterTabPane";
 
 const { Content } = Layout;
 
@@ -18,6 +19,7 @@ export default function AppContent() {
       <div
         style={{ padding: 24, minHeight: 380, background: colorBgContainer }}
       >
+        <FilterTabPane />
         <Row gutter={[16, 16]}>
           <Col span={4}>
             <CardItem />
