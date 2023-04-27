@@ -10,7 +10,10 @@ export default function AppContent() {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
-    <Content className="site-layout" style={{ padding: "0 50px" }}>
+    <Content
+      className="site-layout"
+      style={{ padding: "0 50px", maxWidth: "1980px", margin: "auto" }}
+    >
       <Breadcrumb style={{ margin: "16px 0" }}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
@@ -21,36 +24,18 @@ export default function AppContent() {
       >
         <FilterTabPane />
         <Row gutter={[16, 16]}>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
-          <Col span={4}>
-            <CardItem />
-          </Col>
+          {[...Array(50).keys()].map((el, key) => (
+            <Col
+              xs={{ span: 24 }}
+              sm={{ span: 12 }}
+              md={{ span: 8 }}
+              lg={{ span: 6 }}
+              xl={{ span: 6 }}
+              xxl={{ span: 4 }}
+            >
+              <CardItem />
+            </Col>
+          ))}
         </Row>
       </div>
     </Content>

@@ -15,10 +15,9 @@ const iconContainerStyle = {
   "align-items": "center",
   "justify-content": "space-between",
   height: "100%",
-  padding: "0 10px",
 };
 
-export default function ImageCarousel() {
+export default function ImageCarousel({}) {
   const slider = useRef();
   return (
     <Carousel
@@ -33,11 +32,34 @@ export default function ImageCarousel() {
           <h3 style={contentStyle}>
             <div style={iconContainerStyle}>
               <LeftCircleFilled
-                style={{ fontSize: "20px" }}
+                style={{
+                  fontSize: "20px",
+                  position: "relative",
+                  zIndex: 2,
+                  padding: "0 10px",
+                }}
                 onClick={() => slider.current.prev()}
               />
+              <div
+                style={{
+                  height: 160,
+                  position: "absolute",
+                  zIndex: 1,
+                  overflow: "hidden",
+                  objectFit: "cover",
+                }}
+              >
+                <img
+                  alt="example"
+                  style={{
+                    maxHeight: "100%",
+                    margin: "auto",
+                  }}
+                  src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg"
+                />
+              </div>
               <RightCircleFilled
-                style={{ fontSize: "20px" }}
+                style={{ fontSize: "20px", zIndex: 2, padding: "0 10px" }}
                 onClick={() => slider.current.next()}
               />
             </div>
