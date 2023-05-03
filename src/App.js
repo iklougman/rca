@@ -1,9 +1,7 @@
 import React from "react";
-
 import "./App.css";
 import AppHeader from "./containers/header";
 import AppContent from "./containers/content";
-
 import { Layout } from "antd";
 const { Header, Content, Footer } = Layout;
 
@@ -13,6 +11,7 @@ function App() {
       <Header>
         <AppHeader />
       </Header>
+
       <Content>
         <AppContent />
       </Content>
